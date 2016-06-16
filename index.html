@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="bower_components/angular/angular.js"></script>
+<script src="index.js"></script>
+<body ng-app="myApp">
+<div ng-controller="ctrl">
+
+
+    <input type="text"
+           ng-model="user"
+           ng-model-options="{ updateOn: 'blur' }"
+           ng-keyup="cancel($event)"/>
+
+
+    <ul>
+        <li ng-repeat="list in addList track by $index">{{list}}
+            <button ng-click="edit(user)">Edit</button>
+            <button ng-click="add(user)">Add</button>
+            <button ng-click="del(user)">Del</button>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="bower_components/angular/angular.js"></script>
+<script src="index.js"></script>
+<body ng-app="myApp">
+<div ng-controller="ctrl">
+
+
+
+                <input type="text"
+                       ng-model="user"
+                       ng-model-options="{ updateOn: 'blur' }"
+                       ng-keyup="cancel($event)"  />
+
+      <button ng-click="edit(user)">Edit </button>{{a}}
+</div>
+</body>
+</html>-->
